@@ -1,16 +1,14 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f8f9fa;
-    scroll-behavior: smooth;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  scroll-behavior: smooth;
+  padding-top: 80px; /* Match or exceed navbar height */
+}
   
   .page {
     min-height: 100vh;
+    min-width: 100vw;
     padding: 40px 20px;
     box-sizing: border-box;
   }
@@ -49,7 +47,7 @@ body {
   } 
   .login-container {
     background: white;
-    padding: 30p 45px;
+    padding: 30px 45px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -125,6 +123,15 @@ body {
   .signup-link a:hover {
     text-decoration: underline;
   }
+
+  .center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full viewport height */
+  background-color: #f8f9fa;
+}
+
   .navbar {
   display: flex;
   justify-content: space-between;
@@ -138,6 +145,7 @@ body {
   color: yellow;
   z-index: 1000;
   box-sizing: border-box;
+  height: 70px;
 }
 
 .logo {
@@ -186,6 +194,7 @@ body {
   margin-top: 45px;
   font-size: 15px;
   color: yellow;
+  width: 100%;
 }
 
 .footer-links {
@@ -207,10 +216,190 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .main {
   flex: 1;
-  padding-top: 80px;
-   padding-left: 2rem;
+  padding: 80px 30px 0;
+  box-sizing: border-box;
+  max-width: 100%; 
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+  margin: 0 auto; 
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+  width: 250px;
+}
+
+.search-input:focus {
+  width: 300px;
+}
+
+.search-button {
+  border: none;
+  background-color: black;
+  color: yellow;
+  padding: 10px 16px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid red;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: yellow;
+  border: 2px solid black;
+  color: black;
+  font-weight: bold;
+}
+
+.store-title {
+   text-align: center;
+  font-size: 36px;
+  margin-top: 40px;
+  color: black;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  overflow: hidden;
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.55);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.add-btn {
+  background-color: lightgreen;
+  border: 2px solid green;
+  padding: 10px 16px;
+  color: green;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: green;
+  border: 3px solid lightgreen;
+  font-weight: bold;
+  color: lightgreen;
+}
+
+.buy-btn {
+   background-color: yellow;
+  color: black;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 120px;
+  text-align: center;
+  transition: 1s;
+}
+
+.buy-btn:hover {
+  background-color: black;
+  border: 3px solid yellow;
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+}
+
+.badge-new {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: #28a745;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
 }
