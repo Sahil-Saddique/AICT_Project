@@ -474,3 +474,57 @@ body {
   border: 2px solid black;
   border-radius: 15px;
 }
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 8px;
+}
+
+.container h2 {
+  text-align: center;
+  color: #333;
+  text-decoration: underline;
+}
+
+.container label {
+  display: block;
+  margin-top: 15px;
+  color: #555;
+}
+
+.container input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+
+.container textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.container button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: yellow;
+  color: black;
+  border: 2px solid black;
+  transition: 0.8s;
+  border-radius: 18px;
+  transform: scale(1.05);
+}
